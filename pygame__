@@ -1,0 +1,34 @@
+import pygame  # Import the Pygame module
+import sys  # To handle exiting the program
+
+# Initialize Pygame
+pygame.init()
+
+# Set the size of the window
+screen_width = 800
+screen_height = 600
+screen = pygame.display.set_mode((screen_width, screen_height))
+
+# Set the window title
+pygame.display.set_caption("My First Pygame Window")
+
+# Define colors using RGB values (Red, Green, Blue)
+WHITE = (255, 255, 255)
+
+# Game loop
+running = True
+while running:
+    # Event handling loop
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Fill the screen with a white color
+    screen.fill(WHITE)
+
+    # Update the display
+    pygame.display.flip()
+
+# Quit Pygame
+pygame.quit()
+sys.exit()
